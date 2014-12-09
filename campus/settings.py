@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'market',
     'user',
+    'common',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,8 +61,15 @@ WSGI_APPLICATION = 'campus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cpc_zzy_test',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '',
+        'PORT': '',
+        'OPTIONS': {
+            'autocommit': True,
+        },
     }
 }
 
