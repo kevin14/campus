@@ -17,11 +17,17 @@ class CpcGoods(models.Model):
     createAt = models.IntegerField(max_length=10)
     updateAt = models.IntegerField(max_length=10)
 
+    class Meta:
+        db_table = 'cpc_goods'
+
 
 class CpcPics(models.Model):
     picUrl = models.CharField(max_length=30)
     createAt = models.IntegerField(max_length=10)
     updateAt = models.IntegerField(max_length=10)
+
+    class Meta:
+        db_table = 'cpc_pics'
 
 
 class CpcComments(models.Model):
@@ -31,3 +37,6 @@ class CpcComments(models.Model):
     pid = models.IntegerField(max_length=10)
     createAt = models.IntegerField(max_length=10)
     updateAt = models.IntegerField(max_length=10)
+
+    class Meta:
+        db_table = 'cpc_comments'
